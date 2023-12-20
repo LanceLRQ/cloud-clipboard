@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './app';
 import reportWebVitals from './reportWebVitals';
+import { ConfigProvider } from 'antd';
+import antdConf from "./antd_conf";
+import RouterIndex from "./pages";
+import {RouterProvider} from "react-router-dom";
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ConfigProvider {...antdConf}>
+      <RouterProvider router={RouterIndex}></RouterProvider>
+    </ConfigProvider>
   </React.StrictMode>
 );
 

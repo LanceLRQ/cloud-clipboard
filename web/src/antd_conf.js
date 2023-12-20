@@ -4,7 +4,8 @@ const antdConfig = {
             Layout: {
                 headerBg: '#fff',
                 bodyBg: '#fff',
-            }
+                siderBg: 'rgba(0, 0, 0, 0.5)'
+            },
         }
     }
 }

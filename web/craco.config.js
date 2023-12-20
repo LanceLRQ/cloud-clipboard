@@ -1,3 +1,4 @@
+const path = require('path')
 const sassResourcesLoader = require('craco-sass-resources-loader');
 
 module.exports = {
@@ -9,4 +10,10 @@ module.exports = {
             },
         },
     ],
+    webpack: {
+        //@符号作为src文件
+        alias: {
+            '@': path.join(__dirname, 'src')
+        },
+    }
 }

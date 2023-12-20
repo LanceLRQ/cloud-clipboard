@@ -1,8 +1,6 @@
 .main-layout {
     height: 100%;
     .header-layout {
-        //position: relative;
-        //z-index: 1;
         box-shadow: 0 0 $width-1 $grey-4;
         border-bottom: 1px solid $grey-4;
     }
@@ -14,5 +12,11 @@
     .content-layout {
         padding: $width-2;
         overflow-y: auto;
+    }
+    .header-input-layout {
+        width: 100%;
+        padding: $width-2;
+        box-shadow: 0 0 $width-1 $grey-4;
+        border-bottom: 1px solid $grey-4;
     }
 }
