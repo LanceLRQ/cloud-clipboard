@@ -11,8 +11,8 @@ func SetupMainRoutes(app *fiber.App) {
 	api.Get("", ApiIndex)
 
 	apiAuth := app.Group("/api/auth")
-	apiAuth.Get("", auth.AuthLogin)
-	apiAuth.Get("otp_info", auth.OtpInfoView)
+	apiAuth.Post("", auth.AuthLogin)
+	apiAuth.Get("otp_info", server.CreateJWTMiddleware(), auth.OtpInfoView)
 
 	clipBoard := app.Group("/api/clipboard")
 	clipBoard.Use(server.CreateJWTMiddleware())
