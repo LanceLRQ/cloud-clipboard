@@ -1,0 +1,16 @@
+server:
+  http_host: 0.0.0.0
+  http_port: 7150
+  debug_log: ./server.debug.log
+  access_log: ./server.access.log
+
+security:
+  jwt_secret: test_jwt
+  jwt_expire: 720   # unit: hours
+  otp_url: "otpauth://totp/test:test-account?algorithm=SHA1&digits=6&issuer=test&period=32&secret=TR4RSHMW6GFFWYJEQDUIDAEK5ECA44CT"
+
+redis:
+  host: 127.0.0.1
+  port: 6379
+  password: 12345678
+  main_db: 0
